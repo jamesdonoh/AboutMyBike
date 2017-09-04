@@ -1,14 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pu6-cc-OBn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AboutMyBike-->
+        <scene sceneID="j4H-p2-rrJ">
+            <objects>
+                <viewController id="qvd-j1-avs" customClass="HomeViewController" customModule="AboutMyBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mRX-YZ-kBm"/>
+                        <viewControllerLayoutGuide type="bottom" id="bAs-hD-2nS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yKf-5m-Llj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1i7-4W-y6g">
+                                <rect key="frame" x="16" y="84" width="343" height="148.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please use the Edit button to edit your bike" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3l-6h-epg">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3In-l1-nBo">
+                                        <rect key="frame" x="0.0" y="20.5" width="343" height="128"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-O0-hYU">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gdt-O0-hYU" secondAttribute="height" multiplier="1:1" id="eqW-9h-0bD"/>
+                                                    <constraint firstAttribute="height" constant="128" id="rsf-0G-3Gg"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kJU-uj-DMs">
+                                                <rect key="frame" x="136" y="0.0" width="207" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="207" placeholderIntrinsicHeight="128" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ad-fg-wlj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="128"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1i7-4W-y6g" firstAttribute="trailing" secondItem="yKf-5m-Llj" secondAttribute="trailingMargin" id="ZAj-S0-JcV"/>
+                            <constraint firstItem="1i7-4W-y6g" firstAttribute="top" secondItem="mRX-YZ-kBm" secondAttribute="bottom" constant="20" id="bei-h6-rbt"/>
+                            <constraint firstItem="1i7-4W-y6g" firstAttribute="leading" secondItem="yKf-5m-Llj" secondAttribute="leadingMargin" id="vlK-lY-Wud"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AboutMyBike" id="slg-8v-nmj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="PGS-Gt-4bW">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="rMv-rP-KCJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bikeImageView" destination="gdt-O0-hYU" id="cgs-a0-gyH"/>
+                        <outlet property="bikeInfoLabel" destination="6ad-fg-wlj" id="tsE-O5-WaG"/>
+                        <outlet property="helpMessageLabel" destination="S3l-6h-epg" id="gCx-jD-ONQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0u-N3-b0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="136.28185907046478"/>
+        </scene>
+        <!--Edit Bike-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BikeViewController" customModule="AboutMyBike" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +93,113 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-v2-OIV">
+                                <rect key="frame" x="16" y="84" width="343" height="472"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bike make" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="moC-zi-a6J">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bike model" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pBw-11-n1Q">
+                                        <rect key="frame" x="0.0" y="38" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter VIN" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yhY-7U-QFp">
+                                        <rect key="frame" x="0.0" y="76" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter engine no" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kgk-Ie-Ecq">
+                                        <rect key="frame" x="0.0" y="114" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="x54-pQ-L9T">
+                                        <rect key="frame" x="11.5" y="152" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="x54-pQ-L9T" secondAttribute="height" multiplier="1:1" id="LFm-hm-6p0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="QYY-dM-9F6" appends="YES" id="tyB-GS-9Et"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yhY-7U-QFp" secondAttribute="trailing" id="1Rk-L6-fij"/>
+                                    <constraint firstAttribute="trailing" secondItem="pBw-11-n1Q" secondAttribute="trailing" id="7mS-M4-nWK"/>
+                                    <constraint firstAttribute="trailing" secondItem="kgk-Ie-Ecq" secondAttribute="trailing" id="EE9-37-oV1"/>
+                                    <constraint firstAttribute="trailing" secondItem="moC-zi-a6J" secondAttribute="trailing" id="rtc-3N-hYK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y7T-v2-OIV" secondAttribute="trailing" id="1LI-s3-Uxa"/>
+                            <constraint firstItem="Y7T-v2-OIV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1NF-c2-BO8"/>
+                            <constraint firstItem="Y7T-v2-OIV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="nzx-j2-xjl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Edit Bike" id="aFu-7R-urk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9wG-Sa-5D8">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="JQ4-yo-9mb"/>
+                                <segue destination="jF7-jp-q4Y" kind="unwind" unwindAction="unwindToHomeWithSender:" id="fwF-Nt-H5c"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eaV-Mt-Z7V">
+                            <connections>
+                                <segue destination="jF7-jp-q4Y" kind="unwind" unwindAction="unwindToHomeWithSender:" id="2g6-cZ-lYU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="engineNoTextField" destination="kgk-Ie-Ecq" id="fNe-fO-qfY"/>
+                        <outlet property="makeTextField" destination="moC-zi-a6J" id="En9-g1-Z4y"/>
+                        <outlet property="modelTextField" destination="pBw-11-n1Q" id="OaO-pS-Ioe"/>
+                        <outlet property="photoImageView" destination="x54-pQ-L9T" id="BJh-IC-X8g"/>
+                        <outlet property="saveButton" destination="eaV-Mt-Z7V" id="9fG-U5-Idp"/>
+                        <outlet property="vinTextField" destination="yhY-7U-QFp" id="C8g-6Z-3CT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="jF7-jp-q4Y" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="QYY-dM-9F6">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="biq-1J-6qu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1129" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bf8-sM-ocl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pu6-cc-OBn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v8w-NM-rR7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qvd-j1-avs" kind="relationship" relationship="rootViewController" id="Kh1-Bw-Xd7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgh-q9-7gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759.20000000000005" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="540" height="540"/>
+    </resources>
 </document>
